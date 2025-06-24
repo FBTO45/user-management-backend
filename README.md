@@ -7,6 +7,54 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+
+# composer create-project laravel/laravel user-management-backend
+ buka nama perojek cd user-management-backend
+ lalu jalankan php artisan migrate untuk mebuat databases
+ untuk server php artisan serve
+
+# dokumentasi postman
+curl --location --request GET 'http://localhost:8000/users' \
+--header 'Authorization: Bearer {{auth_token}}' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "current_page": 1,
+    "data": [
+        {
+            "id": 1,
+            "name": "Admin User",
+            "email": "admin@example.com",
+            "role": "admin",
+            "created_at": "2023-05-20T10:00:00.000000Z",
+            "updated_at": "2023-05-20T10:00:00.000000Z"
+        },
+        {
+            "id": 2,
+            "name": "Regular User",
+            "email": "user@example.com",
+            "role": "user",
+            "created_at": "2023-05-21T11:00:00.000000Z",
+            "updated_at": "2023-05-21T11:00:00.000000Z"
+        }
+    ],
+    "first_page_url": "http://localhost:8000/api/users?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "http://localhost:8000/api/users?page=1",
+    "links": [...],
+    "next_page_url": null,
+    "path": "http://localhost:8000/api/users",
+    "per_page": 10,
+    "prev_page_url": null,
+    "to": 2,
+    "total": 2
+}'
+![image](https://github.com/user-attachments/assets/eca2a77c-c17e-47e1-8586-c99cd4ddf09c)
+
+
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
