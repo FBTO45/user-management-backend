@@ -9,9 +9,9 @@
 
 
 # composer create-project laravel/laravel user-management-backend
- buka nama perojek cd user-management-backend
- lalu jalankan php artisan migrate untuk mebuat databases
- untuk server php artisan serve
+ - buka nama perojek cd user-management-backend
+ - lalu jalankan php artisan migrate untuk mebuat databases
+ - untuk server php artisan serve
 
 # dokumentasi postman
 curl --location --request GET 'http://localhost:8000/users' \
